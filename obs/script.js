@@ -4,6 +4,7 @@ const botaoSim = document.getElementById("sim");
 const sessao1 = document.getElementById("sessao1");
 const sessao2 = document.getElementById("sessao2");
 const finaliza = document.getElementById("finalizar");
+let prontoEnviar = 0;
 let convite = "";
 const sairIF = "Voce pode ter pensado, o que vamos fazer indo ao IF(Faculdade nas ferias?? credooo)."
     + " Porem não iremos lá so andar por que vi alguns lugares,até mesmo na entrada,"
@@ -50,6 +51,7 @@ function acertoo() {
         sessao2.style.display = "block";
     }
 }
+const botaoCalendario = document.getElementById("finaliza");
 function decisao(escolha) {
     textoIF.textContent = "";
     textoCafe.textContent = "";
@@ -70,13 +72,16 @@ function decisao(escolha) {
             }
         }
     }
+    if (botaoCalendario) {
+        botaoCalendario.style.display = "block";
+    }
 }
 function abreCalendario() {
     let dataSelecionada;
     const inputData = document.createElement("input");
     inputData.type = "date";
     inputData.style.position = "absolute";
-    inputData.style.opacity = "0";
+    inputData.style.opacity = "0.01"; // Mantido em 0.01 para funcionar no celular
     inputData.style.pointerEvents = "none";
     inputData.addEventListener("change", () => {
         dataSelecionada = inputData.value;
@@ -88,6 +93,7 @@ function abreCalendario() {
         }
     });
     document.body.appendChild(inputData);
+    inputData.focus(); //celular
     if (typeof inputData.showPicker === "function") {
         inputData.showPicker();
     }

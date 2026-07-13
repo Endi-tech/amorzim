@@ -20,6 +20,21 @@ body {
     gap: 25px;
 }
 
+#aviso{
+
+    padding: 5px 20px;
+    border: none;
+    border-radius: 25px; /* Um pouco mais arredondado */
+    background-color: rgb(236, 55, 85);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve nos botões */
+    transition: transform 0.2s, box-shadow 0.2s, top 0.1s ease, left 0.1s ease; /* Transição suave */
+}
+
 #gatim {
     width: 300px;
     height: auto;
