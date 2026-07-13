@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="obs/estilo.css">
+    </head>
+    <body>
+        <section id="sessao1">
+            <img src="/obs/gatim.gif" alt="" id="gatim">
+
+            <div class="botoes">
+                <input type="button" value="Claro meu bem 🎉" id="sim" onclick="acertoo()">
+                <input type="button" value="Não :(" id="nao">
+            </div>
+        </section>
+
+        <input type="button" value="Clique para enviar um convite 🥰😻" style="display: none;" onclick="enviarMensagem()" id="finalizar">
+        
+        <section id="sessao2" style="display: none;">
+            <div>Que amoooor Gabi, sabia que você iria aceitar ❤️😍 </div>
+            <div>Quais desses lugares você gostaria de ir <br> onde podemos passar um tempinho juntos 🌳🤗</div>
+            
+            <div class="conteudo-sessao2">
+                
+                <div class="opcoes-radio">
+                    <label class="radio-container">
+                        <input type="radio" name="escolha" id="irIF" value="if" onclick="decisao(value)">
+                        <span>Passear no IF(Tem que ser mais cedo 🌞) 🌳</span>
+                    </label>
+                    <div id="textIF"></div>
+                    <br>
+
+                    <label class="radio-container">
+                        <input type="radio" name="escolha" id="irCafe" value="irCafe" onclick="decisao(value)">
+                        <span>Ir no Kranbeck 🍕</span>
+                    </label>
+                    <div id="textCafe"></div>
+
+                    <br>
+                    <label class="radio-container">
+                        <input type="radio" name="escolha" id="irFilme" value="irFilme" onclick="decisao(value)">
+                        <span>Ver um filminho no cinema 🍿</span>
+                    </label>
+                    <div id="textFilme"></div>
+                    
+                    <br>
+                    <input type="button" value="Qual dia vamos sair mb?" id="finaliza" onclick="abreCalendario()">
+                </div>
+
+                <img src="/obs/fofus.gif" alt="Gatinhos fofos" id="gif-gatos-carinho">
+                
+            </div>
+        </section>
+
+        <script src="obs/script.js"></script>
+    </body>
+</html>
